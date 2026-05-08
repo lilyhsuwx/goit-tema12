@@ -1,4 +1,4 @@
-const targetDate = new Date('Mar 12, 2027');
+const targetDate = new Date("Mar 8, 2026");
 const daysEl = document.querySelector('[data-value="days"]');
 const hoursEl = document.querySelector('[data-value="hours"]');
 const minutesEl = document.querySelector('[data-value="mins"]');
@@ -26,9 +26,13 @@ const month = [
     "\u041B\u0438\u0441\u0442\u043E\u043F\u0430\u0434",
     "\u0413\u0440\u0443\u0434\u0435\u043D\u044C"
 ];
-setInterval(()=>{
+const id = setInterval(()=>{
     const currentDate = new Date();
     const time = targetDate - currentDate;
+    if (time <= 0) {
+        clearInterval(id);
+        return;
+    }
     const days = Math.floor(time / 86400000);
     const hours = Math.floor(time % 86400000 / 3600000);
     const mins = Math.floor(time % 3600000 / 60000);
