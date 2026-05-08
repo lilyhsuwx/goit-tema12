@@ -1,0 +1,2 @@
+let e=new Date("Mar 12, 2027"),t=document.querySelector('[data-value="days"]'),a=document.querySelector('[data-value="hours"]'),o=document.querySelector('[data-value="mins"]'),n=document.querySelector('[data-value="secs"]');setInterval(()=>{let l=e-new Date,r=Math.floor(l/864e5),u=Math.floor(l%864e5/36e5),c=Math.floor(l%36e5/6e4),d=Math.floor(l%6e4/1e3);t.textContent=r,a.textContent=u,o.textContent=c,n.textContent=d},1e3);
+//# sourceMappingURL=goit-tema12.ccdd2c9f.js.map
